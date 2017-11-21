@@ -1,0 +1,60 @@
+\def\year{2018}\relax
+%File: formatting-instruction.tex
+\documentclass[letterpaper]{article} %DO NOT CHANGE THIS
+\usepackage{aaai18}  %Required
+\usepackage{times}  %Required
+\usepackage{helvet}  %Required
+\usepackage{courier}  %Required
+\usepackage{url}  %Required
+\usepackage{graphicx}  %Required
+\frenchspacing  %Required
+\setlength{\pdfpagewidth}{8.5in}  %Required
+\setlength{\pdfpageheight}{11in}  %Required
+%PDF Info Is Required:
+  \pdfinfo{
+/Title (2018 Formatting Instructions for Authors Using LaTeX)
+/Author (AAAI Press Staff)}
+\setcounter{secnumdepth}{0}  
+ \begin{document}
+% The file aaai.sty is the style file for AAAI Press 
+% proceedings, working notes, and technical reports.
+%
+\title{Named Entity Disambiguation on a Historical Newspaper Archive}
+\author{  Haimonti Dutta, Jayashree Chandrasekaran and Neha Lalaso Jagtap\\
+Department of Management Science and Systems\\
+Department of Computer Science \\
+University at Buffalo, NY 14221\\
+\{haimonti, jchandra, njagtap2\}@buffalo.edu\\
+}
+\maketitle
+\begin{abstract}
+Named Entity Disambiguation (NED) is the task of disambiguating entity mentions in natural language text. Often, the task of disambiguation involves generating evidences (such as textual and structural features) about the named entity from the text and linking the information with entries in a knowledge base. In this paper, we present a generative model based on Latent Dirichlet Allocation (LDA) to disambiguate person names occurring in noisy text. Each entity appears in the context of representative words which can be used for disambiguation -  specifically, each entity is assumed to be a topic and the representative words are generated from the topic; therefore, each entity's context can be modeled as a document which is associated with a unique label. The mixture of topics can then be interpreted for the task of disambiguation. Empirical results presented on a corpus of 14020 historical newspaper articles show that this generative model can obtain reasonable accuracy in the task of Named Entity Disambiguation. 
+\end{abstract}
+
+
+\section{Introduction}
+
+\input{related.tex}
+
+\section{Problem Definition}
+
+Named Entity Disambiguation (NED) is the task of disambiguating entity mentions in natural language text. Often, the task of disambiguation involves generating evidences (such as textual and structural features) about the named entity from the text and matching or linking the information with corresponding entries in knowledge bases such as Wikipedia. The task is challenging because named entity mentions can be ambiguous - for example, the name ``Eugene Kelly" could refer to a banker in the city, a pastor in a local church or some other person.  
+\emph{Named Entity Disambiguation: } Named Entity Disambiguation (NED) 
+
+
+\input{method.tex}
+
+
+\input{results.tex}
+
+\section{The Data}
+\input{data.tex}
+
+\section{Conclusions and Future Work}
+
+\section{Acknowledgements}
+
+
+\bibliography{Bibliography-File}
+\bibliographystyle{aaai}
+\end{document}
